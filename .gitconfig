@@ -1,0 +1,40 @@
+[push]
+	default = matching
+[core]
+	trustctime = false
+	editor = vim
+	filemode = false
+[color]
+	ui = true
+[credential]
+	helper = cache --timeout=3600
+[merge]
+	tool = vimdiff
+[mergetool]
+	keeptemporaries = false
+	keepbackups = false
+	prompt = false
+	trustexitcode = false
+[alias]
+	last = log -1 --stat
+	cp = cherry-pick
+	co = checkout
+	cl = clone
+	ci = commit
+	st = status -sb
+	br = branch
+	unstage = reset HEAD --
+	dc = diff --cached
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+	gl = log --format=\"%Cgreen%h %Cred[%cd] %Creset<%an> %Creset  %Cgreen%s  %Creset \"
+    gl2 = log --format=\"%Cgreen%h %Cred[%ci] %Creset<%an> %Creset  %Cgreen%s  %Creset \"
+    glc = log --format=\"%Cgreen%h %Cred[%cd] %Creset<committer:%cn> : %Cred[%ad]  %Creset<author:%cn>   %Creset \"
+    glc2 = log --format=\"%Cgreen%h %Cred[%ci] %Creset<committer:%cn> : %Cred[%ai]  %Creset<author:%cn>  %Creset \"
+    glc3 = log --format=\"%Cgreen%h %Cred[%ci] %Creset<committer:%cn> : %Cred[%ai]  %Creset<author:%cn>   %n        %Cgreen%s   %Creset \"
+	gll = log --format=\"%Cgreen%h %Cred[%ad] %Creset<%an> %Creset  %Cgreen%s  %Creset \"
+    glt = log --format=\"%Cgreen%h ::  %ad :: %aD  :: %ar :: %at :: %ai %Creset \"
+[user]
+	email = chenyunzhou@cvte.com
+	name = chenyunzhou
+[commit]
+	template = /home/user/.git_log_template.txt
